@@ -1,0 +1,18 @@
+services:
+  postgresql-rapline:
+    image: postgres
+    container_name: postgres-rapline
+    environment:
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+
+  adminer-rapline:
+    image: adminer
+    container_name: adminer-rapline
+    depends_on:
+      - postgresql-rapline
+    ports:
+      - '8080:8080'
