@@ -1,31 +1,14 @@
-'use client';
+import Link from 'next/link';
 
 export default function Home() {
-  async function createSong() {
-    const response = await fetch('/api/songs', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        artist: 'Artiste Exemple',
-        song_name: 'Nom de la Chanson',
-        lyrics: ['Paroles de la chanson'],
-      }),
-    });
-  
-    if (response.ok) {
-      const song = await response.json();
-      console.log('Chanson créée:', song);
-    } else {
-      const errorInfo = await response.json();
-      console.error('Erreur lors de la création de la chanson:', errorInfo);
-    }
-  }
-
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <button onClick={() => createSong()}>Add song</button>
+    <div className="grid gap-40 justify-center content-center h-dvh">
+      <h1 className="text-8xl">Rhymes</h1>
+      <div className='grid justify-center'>
+        <button className='border-none border-2 rounded-full px-5 py-2 text-xl bg-gray-500 hover:bg-gray-700 text-white'>
+          <Link href="/songList">Choisir un song</Link>
+        </button>
+      </div>
     </div>
   );
 }

@@ -16,15 +16,17 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "fastest-levenshtein": "^1.0.16",
+    "lodash.debounce": "^4.0.8",
     "lucide-react": "^0.454.0",
     "mongodb": "^6.10.0",
-    "next": "14.2.15",
+    "next": "^15.0.3",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.13",
     "@types/node": "^20.16.11",
     "@types/react": "^18",
     "@types/react-dom": "^18",

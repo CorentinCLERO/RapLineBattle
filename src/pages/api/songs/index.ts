@@ -1,4 +1,3 @@
-// src/pages/api/songs.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 import prisma from '../prismaClient';
 
