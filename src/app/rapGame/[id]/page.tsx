@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import getTextScore from "@/app/utils/getTextScore";
 import { useParams } from "next/navigation";
@@ -49,7 +48,7 @@ function Page() {
 
   return (
     <>
-      <Header displaySearchBar={false} />
+      <Header />
       <div className="flex justify-center">
         <div className="flex flex-col gap-5 w-4/5 mt-10">
           <div className="text-center text-5xl">Rap game</div>
@@ -67,7 +66,7 @@ function Page() {
           />
           <div>{lyrics && lyrics[(RandomNumber || 0) + 1]}</div>
           <div>
-            <Button onClick={() => validateScore()}>Valider</Button>
+            <button className="border-none border-2 rounded-full px-5 py-2 text-xl bg-stone-500 hover:bg-stone-700 text-white disabled:bg-slate-300" onClick={() => validateScore()}>Valider</button>
           </div>
         </div>
       </div>

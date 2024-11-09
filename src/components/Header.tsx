@@ -7,7 +7,7 @@ import { useCallback } from 'react';
 import debounce from 'lodash.debounce';
 import Link from 'next/link';
 
-function Header({displaySearchBar = true}) {
+function Header({displaySearchBar = false}) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [inputValue, setInputValue] = useState(searchParams?.get('search') || '');
