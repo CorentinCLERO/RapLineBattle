@@ -4,7 +4,7 @@ import React, { useMemo, useState } from 'react';
 import { Input } from "@/components/ui/input"
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useCallback } from 'react';
-import debounce from 'lodash/debounce';
+import debounce from 'lodash.debounce';
 import Link from 'next/link';
 
 function Header({displaySearchBar = true}) {
