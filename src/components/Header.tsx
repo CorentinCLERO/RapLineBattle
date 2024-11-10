@@ -7,7 +7,12 @@ import { useCallback } from 'react';
 import debounce from 'lodash.debounce';
 import Link from 'next/link';
 
-function Header({displaySearchBar = false}) {
+interface HeaderProps {
+  displaySearchBar?: boolean;
+  song?: string;
+}
+
+function Header({ displaySearchBar = false, song }: HeaderProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [inputValue, setInputValue] = useState(searchParams?.get('search') || '');
@@ -48,6 +53,7 @@ function Header({displaySearchBar = false}) {
         {displaySearchBar && <div className='content-center rounded-lg text-black'>
           <Input type="text" placeholder="Rechercher..." onChange={handleInputChange} value={inputValue} />
         </div>}
+        {song && <div className='content-center text-xl'>{song}</div>}
       </div>
     </div>
   );
