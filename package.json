@@ -27,6 +27,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/lodash": "^4.17.13",
     "@types/lodash.debounce": "^4.0.9",
     "@types/node": "^20.16.11",
