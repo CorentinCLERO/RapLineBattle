@@ -5,15 +5,7 @@ import { useParams } from "next/navigation";
 import Header from "@/components/Header";
 import Game from "@/components/Game";
 import { Loader2 } from "lucide-react";
-
-export type SongType = {
-  id: string;
-  artist: string;
-  song_name: string;
-  lyrics: string[];
-};
-
-export const GameContext = createContext({});
+import { SongType } from "@/context/GAmeContext";
 
 function Page() {
   const searchParams = useParams();
