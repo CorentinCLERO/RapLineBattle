@@ -6,7 +6,6 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useCallback } from 'react';
 import debounce from 'lodash.debounce';
 import Link from 'next/link';
-// import logoSvg from '@/assets/logo.svg';
 import Image from 'next/image';
 
 interface HeaderProps {
