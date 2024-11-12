@@ -1,7 +1,7 @@
 "use client";
 
 import React, { ReactNode, useState } from "react";
-import { GameContext, SongType } from "./GAmeContext";
+import { GameContext, SongType } from "./GameContext";
 
 interface GameProviderProps {
   children: ReactNode;

@@ -1,11 +1,11 @@
 "use client";
 
-import React, { createContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Header from "@/components/Header";
 import Game from "@/components/Game";
 import { Loader2 } from "lucide-react";
-import { SongType } from "@/context/GAmeContext";
+import { SongType } from "@/context/GameContext";
 
 function Page() {
   const searchParams = useParams();

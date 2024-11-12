@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import getTextScore from "@/app/utils/getTextScore";
-import { SongType } from "@/app/rapGame/[id]/page";
+import { SongType } from "@/context/GameContext";
 
 type followScoreType = {
   score: number;
