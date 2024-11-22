@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -22,7 +23,7 @@ export default function Home() {
   /> 
 </div>
       <div className='grid justify-center'>
-        <button className='border-none border-2 rounded-full px-5 py-2 text-xl bg-stone-500 hover:bg-stone-700 text-white disabled:bg-slate-300' onClick={() => setIsLoading(true)} disabled={isLoading}>
+        <Button onClick={() => setIsLoading(true)} disabled={isLoading}>
           {isLoading ? 
             <div className='flex gap-5'>
             <Loader2 className="animate-spin" />
@@ -30,7 +31,7 @@ export default function Home() {
             </div> :
             <Link href="/songList">Choisir une musique</Link>
           }
-        </button>
+        </Button>
       </div>
     </div>
   );
