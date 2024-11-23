@@ -112,9 +112,9 @@ function Page() {
         <div className="mb-5">
           <div className="mb-2 text-2xl">Niveaux de difficultés :</div>
           <div className="grid grid-cols-3 gap-5">
-            <Button variant={textDificulty === "trou_facile" ? "trou_facile_selected" : "trou_facile"} onClick={() => changetextDifficulty("trou_facile")}>Texte à trous niveau facile</Button>
-            <Button variant={textDificulty === "trou_moyen" ? "trou_moyen_selected" : "trou_moyen"} onClick={() => changetextDifficulty("trou_moyen")}>Texte à trous niveau moyen</Button>
-            <Button variant={textDificulty === "trou_difficile" ? "trou_difficile_selected" : "trou_difficile"} onClick={() => changetextDifficulty("trou_difficile")}>Texte à trous niveau difficile</Button>
+            <Button variant={textDificulty === "trou_facile" ? "trou_facile_selected" : "trou_facile"} onClick={() => changetextDifficulty("trou_facile")} disabled>Texte à trous niveau facile</Button>
+            <Button variant={textDificulty === "trou_moyen" ? "trou_moyen_selected" : "trou_moyen"} onClick={() => changetextDifficulty("trou_moyen")} disabled>Texte à trous niveau moyen</Button>
+            <Button variant={textDificulty === "trou_difficile" ? "trou_difficile_selected" : "trou_difficile"} onClick={() => changetextDifficulty("trou_difficile")} disabled>Texte à trous niveau difficile</Button>
             <Button variant={textDificulty === "phrase_facile" ? "phrase_facile_selected" : "phrase_facile"} onClick={() => changetextDifficulty("phrase_facile")}>Phrase niveau facile</Button>
             <Button variant={textDificulty === "phrase_moyen" ? "phrase_moyen_selected" : "phrase_moyen"} onClick={() => changetextDifficulty("phrase_moyen")}>Phrase niveau moyen</Button>
             <Button variant={textDificulty === "phrase_difficile" ? "phrase_difficile_selected" : "phrase_difficile"} onClick={() => changetextDifficulty("phrase_difficile")}>Phrase niveau difficile</Button>
